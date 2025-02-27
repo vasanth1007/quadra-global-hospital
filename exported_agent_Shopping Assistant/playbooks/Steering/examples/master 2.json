@@ -1,0 +1,101 @@
+{
+  "name": "fc5c952a-85bc-4405-bb8a-5eeb7e740f2b",
+  "actions": [ {
+    "flowInvocation": {
+      "flow": "Greeting"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Feel free to select from the options above, or just type in what you're looking for and I'll assist you."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Show me t-shirts"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Capture Product Category",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer wants to see t-shirts.",
+        "actionParameters": {
+          "offset": 0,
+          "previous_search": ""
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "The customer wants to see t-shirts.",
+        "state": "OK",
+        "actionParameters": {
+          "offset": 0,
+          "search": "t-shirt"
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Show Products",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer wants to see t-shirts.",
+        "actionParameters": {
+          "offset": 0,
+          "search": "t-shirt"
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "t-shirts are fetched and stored.",
+        "state": "OK",
+        "actionParameters": {
+          "shown_products": [ {
+            "id": "TSHEJQ22W8XPPGGH",
+            "title": "ARISE Self Design, Printed Men's Henley Maroon T-Shirt"
+          }, {
+            "id": "TSHEJQ2FHCZZMUZB",
+            "title": "ARISE Self Design, Printed Men's Henley Green T-Shirt"
+          } ]
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do any of these look good to you, or are you looking for something else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yeah but I don't know which one to choose. can you suggest which one is best for me?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Got it. Should I check out customer reviews to find out more about the size and fit?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "that would be great"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Reviews",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer is uncertain about which product to purchase among those shown.",
+        "actionParameters": {
+          "shown_products": [ {
+            "id": "TSHEJQ22W8XPPGGH",
+            "title": "ARISE Self Design, Printed Men's Henley Maroon T-Shirt"
+          }, {
+            "id": "TSHEJQ2FHCZZMUZB",
+            "title": "ARISE Self Design, Printed Men's Henley Green T-Shirt"
+          } ]
+        }
+      },
+      "playbookOutput": {
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "displayName": "master 2",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "en"
+}

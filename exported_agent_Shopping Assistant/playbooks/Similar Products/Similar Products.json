@@ -1,0 +1,34 @@
+{
+  "name": "608ee0ab-bab1-49ab-8f67-5754fc73c027",
+  "displayName": "Similar Products",
+  "goal": "Show similar products.\n\nNote:\n1. Do not ask the customer if they want to see the product or not. Because, the products are already displayed by the frontend when they are fetched.",
+  "inputParameterDefinitions": [ {
+    "name": "shown_products",
+    "description": "previously shown products",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "shown_products",
+    "description": "similar product shown and previously shown products.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "ARRAY",
+        "items": {
+          "inlineSchema": {
+            "type": "STRING"
+          }
+        }
+      }
+    }
+  } ],
+  "referencedTools": [ "similar-products" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Call ${TOOL: similar-products} to fetch the similar products and store the products id and title in the parameter $shown_products. Your task is over."
+    } ]
+  }
+}

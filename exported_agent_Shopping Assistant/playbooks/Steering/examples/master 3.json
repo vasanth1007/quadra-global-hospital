@@ -1,0 +1,162 @@
+{
+  "name": "b87514b7-99e2-4823-9b66-8b925894db1b",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Welcome"
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "Greeting"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Feel free to select from the options above, or just type in what you're looking for and I'll assist you."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Show me medium sized pants"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Capture Product Category",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer wants to see medium sized pants.",
+        "actionParameters": {
+          "offset": 0,
+          "previous_search": ""
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "The customer is looking for medium size pants. The agent cannot filter out products by sizes, but it can show pants.",
+        "state": "OK",
+        "actionParameters": {
+          "offset": 0,
+          "search": "pants"
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Right now, we don't have a size filter for our search, but I can display all the pants we have. Would you like to take a look?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yeh sure"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Show Products",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer wants to see pants.",
+        "actionParameters": {
+          "offset": 0,
+          "search": "pants"
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "the agent has fetched pants and stored them.",
+        "state": "OK",
+        "actionParameters": {
+          "shown_products": [ {
+            "id": "HAREGG26HXNGDGFJ",
+            "title": "Ankita Printed Rayon Women's Harem Pants"
+          }, {
+            "id": "HAREGG26JVZYCC8B",
+            "title": "Ankita Printed Cotton Women's Harem Pants"
+          } ]
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Do any of these options catch your interest, or is there a specific item you want to learn more about? I can offer details on materials, reviews, and other features to help you make an informed decision"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yes, I want to add the first one to the cart with size 32."
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Shopping Cart Management",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer wants to add the Ankita Printed Rayon Women's Harem Pants to the cart.",
+        "actionParameters": {
+          "id": "HAREGG26HXNGDGFJ",
+          "quantity": 1,
+          "shopping_cart": [ ],
+          "size": "32",
+          "title": "Ankita Printed Rayon Women's Harem Pants"
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "The Ankita Printed Rayon Women's Harem Pants has beed added to the cart.",
+        "state": "OK",
+        "actionParameters": {
+          "shopping_cart": [ {
+            "id": "HAREGG26HXNGDGFJ",
+            "quantity": 1,
+            "size": "32",
+            "title": "Ankita Printed Rayon Women's Harem Pants"
+          } ]
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Would you like to purchase any other product?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "nope that's all for now"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Delivery Date",
+      "playbookInput": {
+        "precedingConversationSummary": "The customer has added products to the shopping cart.",
+        "actionParameters": {
+          "shopping_cart": [ {
+            "id": "HAREGG26HXNGDGFJ",
+            "quantity": 1,
+            "size": "32",
+            "title": "Ankita Printed Rayon Women's Harem Pants"
+          } ]
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "The customer has confirmed the delivery dates for all the shopping cart products.",
+        "state": "OK",
+        "actionParameters": {
+          "shopping_cart": [ {
+            "delivery_date": "Apr 10, 2024",
+            "earliest_delivery_date": "Apr 10, 2024",
+            "id": "HAREGG26HXNGDGFJ",
+            "quantity": 1,
+            "size": "32",
+            "title": "Ankita Printed Rayon Women's Harem Pants"
+          } ]
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "User Details",
+      "playbookInput": {
+        "precedingConversationSummary": "the delivery dates are confirmed for all the shopping cart items."
+      },
+      "playbookOutput": {
+        "executionSummary": "The user details are confirmed.",
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "displayName": "master 3",
+  "retrievalStrategy": "STATIC",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "en"
+}

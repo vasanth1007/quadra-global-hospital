@@ -1,0 +1,25 @@
+{
+  "name": "a8cfddd6-494f-4e14-a2e8-1adce5916950",
+  "actions": [ {
+    "userUtterance": {
+      "text": "What is my order status?"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Order Status",
+      "playbookInput": {
+        "precedingConversationSummary": "The user wants to learn their order status"
+      },
+      "playbookOutput": {
+      
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Routing customer to 'Order Status' playbook to learn their order status."
+  },
+  "displayName": "order status",
+  "retrievalStrategy": "STATIC",
+  "languageCode": "undetected"
+}

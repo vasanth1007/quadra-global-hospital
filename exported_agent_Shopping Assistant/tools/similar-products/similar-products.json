@@ -1,0 +1,9 @@
+{
+  "name": "5912b66b-5c40-45fa-8779-24b7e19fb3bb",
+  "displayName": "similar-products",
+  "description": "Get similar products.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "bc35ec86-053c-4f53-8121-7b4b5202414a",
+  "displayName": "get-delivery-date",
+  "description": "Get delivery date for the shopping cart items.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

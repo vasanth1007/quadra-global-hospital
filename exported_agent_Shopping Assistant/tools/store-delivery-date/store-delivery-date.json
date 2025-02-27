@@ -1,0 +1,9 @@
+{
+  "name": "35f03e4d-e514-423a-b81b-4bf5ec943131",
+  "displayName": "store-delivery-date",
+  "description": "Store customer's preferred delivery date.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

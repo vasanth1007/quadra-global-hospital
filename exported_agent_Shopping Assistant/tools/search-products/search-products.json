@@ -1,0 +1,9 @@
+{
+  "name": "f2f8ad9c-03fb-45fc-82ec-713761a34842",
+  "displayName": "search-products",
+  "description": "Search products based on a search query.",
+  "openApiSpec": {
+  
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

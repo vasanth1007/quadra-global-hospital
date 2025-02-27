@@ -1,0 +1,13 @@
+{
+  "name": "8db09d00-b9d9-444b-af03-72c667f1b3c4",
+  "displayName": "place-order",
+  "description": "place an order for the shopping cart items.",
+  "openApiSpec": {
+    "authentication": {
+      "serviceAgentAuthConfig": {
+        "serviceAgentAuth": "ACCESS_TOKEN"
+      }
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}
